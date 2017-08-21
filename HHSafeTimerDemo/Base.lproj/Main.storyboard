@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tVe-Ur-4Pu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5v-Dn-rKs">
+                                <rect key="frame" x="166" y="192" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-F7-QIB">
+                                <rect key="frame" x="116" y="291" width="31" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="enc-tr-p3h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us6-DU-XOH">
+                                <rect key="frame" x="236" y="291" width="31" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="resumeTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JG0-ZG-3A3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGZ-AZ-Hbh">
+                                <rect key="frame" x="64.5" y="434" width="245" height="30"/>
+                                <state key="normal" title="点击推出视图，验证控制器是否销毁"/>
+                                <connections>
+                                    <action selector="pushViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OQx-rg-E9M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RPh-F7-QIB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="6pu-TZ-CG7"/>
+                            <constraint firstItem="us6-DU-XOH" firstAttribute="leading" secondItem="RPh-F7-QIB" secondAttribute="trailing" constant="89" id="Fz6-kY-p9c"/>
+                            <constraint firstItem="tGZ-AZ-Hbh" firstAttribute="centerX" secondItem="d5v-Dn-rKs" secondAttribute="centerX" id="IYT-aN-5lm"/>
+                            <constraint firstItem="us6-DU-XOH" firstAttribute="centerY" secondItem="RPh-F7-QIB" secondAttribute="centerY" id="O2k-Nn-ayk"/>
+                            <constraint firstItem="d5v-Dn-rKs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sej-P2-8jd"/>
+                            <constraint firstItem="tGZ-AZ-Hbh" firstAttribute="top" secondItem="d5v-Dn-rKs" secondAttribute="bottom" constant="221" id="dJd-1p-zIY"/>
+                            <constraint firstItem="RPh-F7-QIB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="227" id="ejU-76-Lfx"/>
+                            <constraint firstItem="d5v-Dn-rKs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="wsQ-BC-dpn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4dY-Tg-zws"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="d5v-Dn-rKs" id="UYV-Fv-SeS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SuU-km-vOg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tVe-Ur-4Pu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GHr-h6-Rff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f6Z-1I-FmA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCe-68-WNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="-545.57721139430294"/>
+        </scene>
+    </scenes>
+</document>
